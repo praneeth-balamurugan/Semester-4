@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus and Blur Events Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Enter your name">
+<p onmouseenter="b()">poiuydfg,mnbv</p>
+  <script>
+    function b() 
+       { alert("doubleclicked")}
+    
+    const myInput = document.getElementById('myInput');
+
+    // Event handler for the focus event
+    myInput.addEventListener('focus', function() {
+      // Change the background color when the input gains focus
+      myInput.style.backgroundColor = 'yellow';
+    });
+
+    // Event handler for the blur event
+    myInput.addEventListener('blur', function() {
+      // Change the background color back to white when the input loses focus
+      myInput.style.backgroundColor = 'white';
+
+      // Display an alert with the entered value
+      const enteredValue = myInput.value;
+      alert('You entered: ' + enteredValue);
+    });
+  </script>
+</body>
+</html>
